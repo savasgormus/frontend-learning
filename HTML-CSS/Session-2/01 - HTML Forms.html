@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="result.html">
+        <h2>Sizi Tanıyalım</h2>
+                    <!-- --- Input text password ----->
+        <div id="userInfo">
+            <label for="ad">İsim:</label>
+            <input type="text" name="username" id="ad" placeholder="Lütfen isminizi giriniz...">
+            <br><br>
+            <label for="soyad">Soyisim:</label>
+            <input type="text" name="surname" id="soyad" placeholder="Lütfen isminizi giriniz...">
+            <br><br>
+            <label for="şifre">Şifre:</label>
+            <input type="password" name="password" id="şifre" placeholder="Lütfen isminizi giriniz...">
+        </div>
+                    <!-- --- Radio Button --- -->
+        <div id="genderInfo">
+            <h3>Cinsiyet</h3>
+            
+            <input type="radio" name="cinsiyet" id="gender1" value="erkek">
+            <label for="gender1">Erkek</label>
+            <br>
+            <input type="radio" name="cinsiyet" id="gender2" value="kadın">
+            <label for="gender2">Kadın</label><br>
+            <br>
+        </div>
+        <br><hr>
+                    <!-- --- Check Box --- -->
+        <div id="favori">
+            <h4>En Sevdiğiniz Hayvanlar</h4>
+            <input type="checkbox" name="animal" id="panda" value="panda">
+            <label for="panda">Panda</label>
+            <br>
+            <input type="checkbox" name="animal" id="kedi" value="kedi">
+            <label for="kedi">Kedi</label>
+            <br>
+            <input type="checkbox" name="animal" id="köpek" value="köpek">
+            <label for="köpek">Köpek</label>
+            <br><br>
+        </div>
+        <br><hr>
+                    <!-- --- Diğer Bilgiler --- -->
+        <div>
+            <label for="age">Yaşınız:</label>
+            <input type="number" name="yaşınız" id="age" min=7 max=70>
+        </div>
+        <br>
+        <div>
+            <label for="ara">Kitap ara:</label>
+            <input type="search" name="search" id="ara" placeholder="Aranacak kelimeyi giriniz..">
+        </div>
+        <br>
+        <div>
+            <label for="renk">Sevdiğiniz rengi seçiniz:</label>
+            <input type="color" name="color" id="renk">
+        </div>
+        <br>
+        <div>
+            <label for="email">E Posta adresiniz:</label>
+            <input type="email" name="eposta" id="email" placeholder="example@example.com">
+        </div>
+        <br>
+        <div>
+            <label for="dosya">Fotoğrafınızı ekleyiniz:</label>
+            <br><br>
+            <input type="file" name="file" id="dosya" multiple>
+        </div>
+        <br>
+        <div>
+            <label for="tel">Telefon No:</label>
+            <input type="tel" name="phone" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            placeholder="xxx-xxx-xx-xx">
+            <!-- 555-555-55-55 -->
+        </div>
+        <br>
+        <div>
+            <label for="path">Path Seçiminiz:</label>
+            <br>
+            <select name="path" id="path">
+                <option value="FullStack">FullStack</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Dev-Ops">Dev-Ops</option>
+            </select>
+        </div>
+        <br>
+        <div id="birthDate">
+            <label for="date">Doğum Tarihiniz:</label>
+            <br>
+            <input type="date" name="date" id="dogum" min="1989-01-01">
+        </div>
+        <br>
+        <div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
+
+    
+</body>
+</html>

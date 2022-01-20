@@ -1,0 +1,17 @@
+h1{
+    color: darkviolet;
+    /* text-decoration-style: dotted ; */
+    /* text-decoration-color: green; */
+    text-decoration: blue underline overline wavy;
+    text-decoration: capitalize;
+    text-align: center;
+    word-spacing: 15px;
+    letter-spacing: 5px;
+} 
+p{
+    text-indent: 20px;
+}
+
+h3{
+    direction: rtl;
+}

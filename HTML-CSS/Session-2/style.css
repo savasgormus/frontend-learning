@@ -1,0 +1,30 @@
+#userInfo{
+    background-color: rgb(15, 200, 0);
+}
+
+#genderInfo{
+    background-color: #ff1001;
+    border-top: 10px solid black;
+}
+
+#favori{
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: blueviolet; */
+    border: 5px groove blueviolet;
+    /* border-radius: 10px; */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+input{
+    background-color: cyan;
+}
+
+#age{
+    background-color: salmon;
+}
+
+#birthDate{
+    border-top: 5px dotted rgb(255, 143, 240);
+}
