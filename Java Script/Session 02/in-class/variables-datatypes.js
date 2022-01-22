@@ -124,6 +124,7 @@ console.log(`${3+2}`);
 
 // ---Booleans
 
+/*
 console.log(Boolean(""));  // false
 console.log(Boolean(3<5)); // true
 console.log(Boolean(3>5)); // false
@@ -145,3 +146,28 @@ console.log(null === undefined);  // false
 console.log(2 == "2");  // true
 console.log(2 === "2");  // false
 console.log(2 + "2");  // 4 sonucunu verir
+*/
+
+// ---
+
+/*
+console.log(Number.MAX_SAFE_INTEGER);
+
+var x = 0.1 + 0.2;
+console.log(x);
+
+console.log(x.toFixed(5));  // stringe çevirdik
+console.log(+x.toFixed(5)); // number
+
+console.log(15+25);   // 40 - decimal
+console.log(015+025); // 34 - octal sisteme(7li) göre toplama yaptı  015>> 5 + 8 + 0 = 13 --- 025>> 5 + (8*2) = 21
+console.log(018+027); // 41 - octalden çıktı ve decimal toplamı yaptı
+console.log(Number(018));
+
+var a = 2;
+var b = a;
+console.log({a},{b});
+
+var a = 3;
+console.log({a},{b});  // b değişmedi
+*/
