@@ -1,0 +1,54 @@
+*{
+    /* universal selector */
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 25px;
+    background-color: gray;
+}
+
+h1{
+    /* etiketlerle ulaşma */
+    text-align: center;
+    font-size: 3rem;
+    color: crimson;
+}
+
+.brand{
+    /* class ile ulaşma */
+    width: 50%;
+    float: right;
+    padding: 10px;
+}
+
+/* ------------- Combinators-------------- */
+
+div > p{
+    /* div içerisindeki bütün p'leri seçtik */
+    color:crimson;
+    font-weight: 500;
+}
+
+li>p{
+    border: 2px solid blue;
+    color: green;
+}
+
+div + p{
+    /* div'den sonra gelen ilk p - kendi seviyesindeki */
+    border: 3px solid green;
+}
+
+div ~ p{
+    /* div'den sonra gelen bütün p'ler - kendi seviyesindeki */
+    border: 3px solid tomato;
+}
+
+div ~ img{
+    background-color: dodgerblue;
+    border: 3px solid black;
+    border-top-left-radius: 20px;
+}
+
+/* p, img{
+    outline: 4px solid red;
+} */
