@@ -6,11 +6,11 @@ body{
 
 .main-content{
     background-color: cadetblue;
-    width: 500px;
+    /* width: 500px; */
     height: 300px;
     margin: 0 auto;
     padding: 2%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .auto-width{
@@ -30,4 +30,10 @@ body{
 .max-width{
     /* max-width: 700px; */
     min-width: 200px;
+}
+
+.min-width{
+    display: inline-block;
+    min-width: 5px;
+    background-color: deeppink;
 }

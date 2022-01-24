@@ -1,0 +1,14 @@
+p{
+    background-color: grey;
+    border: 2px solid tomato;
+    font-size: 2rem;
+    padding: 20px;
+    /* outline-style: dotted;
+    outline-width: 10px;
+    outline-color: blue; */
+
+    /* outline shorthand */
+
+    outline: 5px inset goldenrod;
+    outline-offset: -20px;
+}
