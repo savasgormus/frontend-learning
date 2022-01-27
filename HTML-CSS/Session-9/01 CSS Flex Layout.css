@@ -1,0 +1,69 @@
+body{
+    background-color: #ddd;
+    color: black;
+}
+
+.flex-container{
+    display: flex;
+    background-color: blueviolet;
+    height: 250px;
+    flex-direction: row;    /*default*/
+    /* flex-direction: row-reverse;  ------ ters şekilde verdi */
+    /* flex-direction: column;          --- yukarıdan aşağıya doğru sıralar  */
+    /* flex-direction: column-reverse;      aşağıdan yukarıya doğru sıralar  */
+
+    /* flex-wrap: nowrap; default */
+    /* flex-wrap: wrap-reverse; sayfa küçülttükçe contenti yukarı doğru aldı */
+    /* flex-wrap: wrap;  sayfayı küçülttükçe contenti aşağı doğru saldı */
+
+    /* flex-flow: row nowrap;          wrap ve directionun short hand versiyonu */
+    /* flex-flow: column wrap;         wrap ve directionun short hand versiyonu */
+    /* flex-flow: column wrap-reverse; */
+
+    /* justify-content: flex-start; default */
+    /* justify-content: flex-end; */
+    /* justify-content: center;  margin auto gibi sağdan soldan eşit boşluk bırakır */
+    /* justify-content: space-between; aralarına boşluk bıraktı */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly;  eşit boşluk bıraktı */
+
+    /* align-items: stretch;  hepsini kapsar */
+    /* align-items: flex-start; kapladığı yer kadar flexin başına yolluyor */
+    /* align-items: flex-end; kapladığı yer kadar flexin sonuna yolluyor */
+    /* align-items: center; */
+    /* align-items: baseline; yazıların bottomunu aynı hizada tutuyor. */
+
+    /* align-content: flex-start; dikey düzleme göre ayarlamamızı sağlar */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+}
+
+.flex-items {
+    border: 1px solid green;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+}
+
+#item1{
+    /* font-size: 36px; */
+    /* height: 100px; */
+    /* padding: 20px; */
+    background-color: red;
+    /* order: 5; */
+}
+#item3{
+    /* font-size: 8px; */
+    /* height: 40px; */
+    background-color: green;
+    /* order: 1; */
+}
+#item5{
+    /* font-size: 24px; */
+    /* height: 20px; */
+    background-color: blue;
+    /* order: 2; */
+}
