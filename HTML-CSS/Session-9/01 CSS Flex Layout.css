@@ -9,7 +9,7 @@ body{
     height: 250px;
     flex-direction: row;    /*default*/
     /* flex-direction: row-reverse;  ------ ters şekilde verdi */
-    /* flex-direction: column;          --- yukarıdan aşağıya doğru sıralar  */
+    flex-direction: column;         /*  --- yukarıdan aşağıya doğru sıralar */
     /* flex-direction: column-reverse;      aşağıdan yukarıya doğru sıralar  */
 
     /* flex-wrap: nowrap; default */
@@ -54,16 +54,27 @@ body{
     /* padding: 20px; */
     background-color: red;
     /* order: 5; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 0; */
+    /* flex-basis: 150px; */
+    /* flex: 1 0 150px; */
+    align-self: flex-end;
 }
 #item3{
     /* font-size: 8px; */
     /* height: 40px; */
     background-color: green;
     /* order: 1; */
+    /* order: -2; */
+    /* flex-grow: 3; */
+    /* flex-basis: 20%; */
+    align-self: center;
 }
 #item5{
     /* font-size: 24px; */
     /* height: 20px; */
     background-color: blue;
     /* order: 2; */
+    /* order: -1; */
+    /* flex-grow: 2; */
 }
