@@ -60,13 +60,40 @@ console.log({sum},{i});
 
 // -------------- for statement
 
-let i = 0;
+// let i = 0;
 
-for (; i < 10;) {
-    console.log(i);
-    i++;
+// for (; i < 10;) {
+//     console.log(i);
+//     i++;
     
+// }
+// console.log({i});
+
+// let str = "clarusway"
+// for (let i = 0; i < str.length; i++) {
+//     console.log(str[i]);
+// }
+
+// --- continue statement
+
+// for (let i = 0; i <= 100; i++){
+//     if (i % 5 == 0) {
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+
+
+while(true){
+    let x = prompt(`bir sayı giriniz: \n q ile çıkış yapabilirsiniz`);
+    if (x == "q") {
+        console.log("çıkış yapıldı");
+        break;
+    } else if (isNaN(x)) {
+        continue;
+    } else{
+        console.log(`${x}'in kares = ${x * x}`);
+        //break;
+    }
 }
-console.log({i});
-
-
