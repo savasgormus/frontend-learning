@@ -1,0 +1,5 @@
+.main__search-bar--microphone,
+.main__search-bar--magnifier {
+    width: 15px;
+    height: 15px;
+}
