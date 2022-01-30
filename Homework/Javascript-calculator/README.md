@@ -1,7 +1,7 @@
 değişkenlerimizi atıyoruz.
 prompt ile kullanıcıdan rakam girmesini istiyoruz. fakat kullanıcının değeri string olacağı için +prompt şeklinde yazıyoruz ki girilen değer number'a dönüşsün.
 
-+prompt şeklinde girmemiş olsaydık: 5 + 3 = 53 sonucunu alırdık. çünkü + operatörü stringeli concarnate etmeye yarar.
++prompt şeklinde girmemiş olsaydık: 5 + 3 = 53 sonucunu alırdık. çünkü + operatörü stringleri concarnate etmeye yarar.
 
 switch (operator) {
 

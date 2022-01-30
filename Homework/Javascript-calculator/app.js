@@ -1,10 +1,10 @@
+
 let num1 = +prompt("Enter first number");
-let opeartor = prompt("Enter operator");
+let operator = prompt("Enter operator");
 let num2 = +prompt("Enter second number");
 let text;
 
-
-switch (opeartor) {
+switch (operator) {
     case '+':
         text = num1 + num2;
         break;
@@ -21,5 +21,4 @@ switch (opeartor) {
         text = "Invalid operator or number";
         break;
 }
-
 console.log(text);
