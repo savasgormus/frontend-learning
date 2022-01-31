@@ -29,4 +29,10 @@ aynı fonksiyonu function expression ile yapacağız.
 1'den 100'e kadar tek tek yazmayacağımız için bir FOR döngüsü oluşturuyoruz.
 for(let i = 0, i < others.lenght; i++) => burada yaptığımız şey önce bir i tanımlamak. daha sonra i'nin maksimum değerini belirlemek. lenght methodu ile others olarak belirlediğimiz değişkenin uzunluğu bizim max değerimiz. ve i'yi her seferinde 1 artırıyoruz. i++.
 daha sonra sum değişkenimizi her iterasyon için i'ye eşitliyoruz.(75. satır)
-for döngüsüyle işimiz bittikten sonra da return sum ile sonucu alıyoruz
+for döngüsüyle işimiz bittikten sonra da return sum ile sonucu alıyoruz.
+
+8. örnek: bir obje oluşturduk. student.name ile bu objenin içine savaş olarak bir name property'si atadık.
+fonksiyonu kurarken ilk satırımızda student.name'i yazdırdık. yukarıda verdiğimiz değeri atadı. daha sonra tekrar student.name = "john" ile global değerini değiştirdik.
+daha sonraki satırda ise student = {name: "leon"} ile SCOPE içerisindeki değerini değiştirdik.
+
+clg(student.name) ile bu değişkenin adını görebiliriz. fonksiyon içerisinde uyguladığımız global değişikliği çıktı olarak alacağız => john

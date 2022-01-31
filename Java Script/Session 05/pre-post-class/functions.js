@@ -81,3 +81,19 @@ const g = (...others) => {
 console.log(g(2,3,4,5));
 */
 
+    //----- örnek 8 -----
+
+let student = {};
+
+student.name = "Savaş";
+
+function sayHi(student){
+    console.log(`hello ${student.name} giriş noktası`);
+    student.name = "john";
+    student = {name: "leon"};
+    console.log(`hello ${student.name} fonksiyon içerisindeki değeri`);
+}
+
+sayHi(student)
+
+console.log(student.name);
