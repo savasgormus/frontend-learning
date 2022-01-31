@@ -132,22 +132,31 @@ let toplam = function(a){
 
 // arrow function
 
-let ahmet = (a) => {
-    return a + 100;
-}
-console.log(ahmet(10));
+// let ahmet = (a) => {
+//     return a + 100;
+// }
+// console.log(ahmet(10));
 
-let mehmet = a => a + 100;
-console.log(mehmet(20));
+// let mehmet = a => a + 100;
+// console.log(mehmet(20));
 
-let toplam2 = a => a + 100;
-console.log(toplam2(30));
+// let toplam2 = a => a + 100;
+// console.log(toplam2(30));
 
-let user = "murat";
+// let user = "murat";
 
-let sayHi = () => console.log(`hello ${user}`);
-sayHi();
+// let sayHi = () => console.log(`hello ${user}`);
+// sayHi();
 
-let toplam3 = (num1,num2) => num1 + num2;
-console.log(toplam3(10,20));
-console.log(typeof toplam3());
+// let toplam3 = (num1,num2) => num1 + num2;
+// console.log(toplam3(10,20));
+// console.log(typeof toplam3());
+
+
+
+let nums = 5;
+let iife = (function(num){
+    return num*(num+1)/2;
+}) (nums);
+
+console.log(iife);
