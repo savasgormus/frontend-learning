@@ -67,3 +67,18 @@
 
     // ----- örnek 7 -----
 
+// let str = " red, green blue"
+
+// let n = str.search("Blue");
+// let n1 = str.search(/Blue/i);
+
+// console.log(n);
+// console.log(n1);
+
+    // ----- örnek 8 -----
+
+let str = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, voluptatibus."
+
+console.log(str.slice(0, 5));
+console.log(str.slice(6));
+console.log(str.slice(10,-10));

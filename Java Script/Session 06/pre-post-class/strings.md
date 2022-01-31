@@ -38,4 +38,12 @@ ilk örnekte "dolor" sözcüğünü buldu ve değiştirdi. fakat ikinci örnekte
 let n2 = str.replace(/Ipsum/i, "muspi");
 
 7. search() metodu
+ilk arama sonucumuz -1 verdi çünkü Blue sözcüğü yok.
+diğerinde de / /i kullanarak büyük küçük harf duyarlılığını engelleyerek aradığımız sözcüğü bulduk.
+
+8. slice() metodu
+istediğimiz indexleri belirleyip kesebiliriz. boşluklar da birer karakter olduğu için dahil edilir.
+eğer 2. değeri vermezsek sonuna kadar olan bütün texti ayırır.
+
+9. split() metodu
 
