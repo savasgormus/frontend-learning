@@ -60,3 +60,14 @@ not: yakında kaldırılacak bir özellik. MDN'de konu ile ilgili açıklama yap
 11. substring() metodu
 negatif index kullanamayız.
 substring(start, end) ile substring(end, start) yapılabilir. ikisi de aynı sonucu verir. belirli aralıktaki stringi almak için kullanırız.
+
+12. toLowerCase() metodu
+stringi küçük harfe çevirir. I harflerini i olarak çevirdi. toLocaleLowerCase() metodu da küçük harfleri lokal şekilde çevirir. "tr-TR" kodu ile çevirir. bilgisayarın local ayarına göre çevirmek için parantezi boş bırakabiliriz.
+
+13. toUpperCase() metodu
+stringi büyük harfe çevirir. i harflerini I'ya çevirdi.
+bunu engellemek için toLocaleUpperCase() metodunu kullanabiliriz.
+
+14. trim() metodu
+trim() ile sağda ve solda olan boşlukları siler.
+trimLeft() ile trimRight() da yapılabilir. bu ikisi dışında parametre almaz. istediğimiz yerlerdeki boşlukları silebiliriz.

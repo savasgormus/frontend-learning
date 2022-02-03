@@ -92,3 +92,22 @@ console.log(str.substr(22,10)); // 22. indexden itibaren 10 index al
 
 console.log(str.substring(22,33)); // 22. indexden 33. indexe kadar.
 console.log(str.substring(33,22)); // 22. indexden 33. indexe kadar. yine aynı şekilde getirdi.
+
+
+// toLowerCase() & toUpperCase()
+
+var pangram = "pijamalı hasta yağız şoföre çabucak güvendi.";
+
+console.log(pangram.toUpperCase());
+console.log(pangram.toLocaleUpperCase("tr-TR")); // tr-TR ile büyük harfleri küçük harfe çevirdik.
+
+var pangram = pangram.toLocaleUpperCase("tr-TR");
+console.log(pangram.toLowerCase());
+console.log(pangram.toLocaleLowerCase());
+
+
+// trim()
+
+var str = "   hello world!   ";
+console.log(str.trim()); // boşlukları siler.
+
