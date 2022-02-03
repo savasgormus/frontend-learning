@@ -34,7 +34,7 @@
 
 // includes()
 
-var str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+var str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. text";
 
 // var n = str.includes("simply");
 // var n1 = str.includes("Simply");
@@ -55,5 +55,40 @@ var str = "Lorem Ipsum is simply dummy text of the printing and typesetting indu
 
 
 // replace()
+console.log(str.replace("Lorem", "Hello"));
+console.log(str); // orjinali değişmedi.
+
+var str = str.replace("Lorem", "Hello");
+console.log(str); // orjinali değişti.
+
+console.log(str.replace(/e/g, "--")); // /e/g gibi regex kullanılır. "e" gördüğü her yere -- koyduk.
+
+// search()
+
+console.log(str.indexOf("text",30)); // 75. indexte
+console.log(str.search("Text")); // -1 çünkü yok
+console.log(str.search(/TEXT/i)); // 28. index regex ile case sensitive'i kaldırdık.
 
 
+// slice()
+
+console.log(str.slice(0,5)); // 0. indexden 5. indexe kadar. "Hello"
+console.log(str.slice(6)); // 6. indexden sona kadar.
+console.log(str.slice(12,-10)); // 12. indexden -10. indexe kadar.
+
+
+// split()
+
+console.log(str.split(" ")); // array olarak döndürür.
+console.log(str.split());  // stringimiz komple bir array oldu
+
+
+// substr()
+
+console.log(str.substr(22,10)); // 22. indexden itibaren 10 index al
+
+
+// substring()
+
+console.log(str.substring(22,33)); // 22. indexden 33. indexe kadar.
+console.log(str.substring(33,22)); // 22. indexden 33. indexe kadar. yine aynı şekilde getirdi.

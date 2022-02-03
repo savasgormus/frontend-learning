@@ -38,12 +38,25 @@ ilk örnekte "dolor" sözcüğünü buldu ve değiştirdi. fakat ikinci örnekte
 let n2 = str.replace(/Ipsum/i, "muspi");
 
 7. search() metodu
+içinde bulunan değerin ilk indexini gösterir.
 ilk arama sonucumuz -1 verdi çünkü Blue sözcüğü yok.
-diğerinde de / /i kullanarak büyük küçük harf duyarlılığını engelleyerek aradığımız sözcüğü bulduk.
+diğerinde de / /i(regex yapısı) kullanarak büyük küçük harf duyarlılığını engelleyerek aradığımız sözcüğü bulduk.
 
 8. slice() metodu
 istediğimiz indexleri belirleyip kesebiliriz. boşluklar da birer karakter olduğu için dahil edilir.
 eğer 2. değeri vermezsek sonuna kadar olan bütün texti ayırır.
 
 9. split() metodu
+stringi bölüyor ve array olarak bize veriyor.
+split(parametre). örneğin split(' ') ile boşlukları ayırıyoruz.
+eğer split("") ise bütün stringi tek tek her harfini ayırıyoruz.
+içerisine parametle vermezsek tek bir array'e dönüştürür.
 
+10. substr() metodu
+stringin içinde arama yapmak istiyorsak bu metodu kullanırız.
+örneğin substr(26,10) 26. indexden 10 karakteri alır.
+not: yakında kaldırılacak bir özellik. MDN'de konu ile ilgili açıklama yapılmış.
+
+11. substring() metodu
+negatif index kullanamayız.
+substring(start, end) ile substring(end, start) yapılabilir. ikisi de aynı sonucu verir. belirli aralıktaki stringi almak için kullanırız.
