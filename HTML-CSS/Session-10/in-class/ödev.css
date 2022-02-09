@@ -1,0 +1,22 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 100px) 50px ;
+}
+
+.content{
+    border: 1px solid black;
+}
+.content1{
+    background-color: #ddd;
+}
+.content2{
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+}
+.content3{
+    grid-column:3/ 4;
+    grid-row: 2 / 3;
+    opacity: 0.4;
+    background-color: blue;
+}
