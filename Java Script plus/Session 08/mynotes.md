@@ -18,3 +18,13 @@ document.getElementsByName("first_name")[0] => isim ile yakalamaya çalışıyor
 Nodelist ile foreach yapabiliriz. HTML collectionda foreach çalıştıramayız. bu yöntemi foreach kullanmak için uygulayabiliriz. 
 
 document.querySelector("#first_name") => id ya da class ile yakalamaya çalışıyoruz. bu sefer bize bir HTML element geldi. querySelector css selectorleri gibi çalışır. örneğin #first_name bir id ismi. ikinci örnekte class ismi vererek aldık. document.querySelector(".input--style-4");
+
+class ismi ile seçtiğimizde indexlememiz gerekiyordu fakat querySelector'un en önemli özelliği, girdiğimiz özelliklere sahip ilk elemanı bize vermesi. ilk elemanı verdiği için indexlememize gerek kalmıyor.
+
+getElementById'den sonra en hızlı çalışan method querySelector'dur.
+
+document.querySelector("[name='first_name']") => yine cssvari bir şekilde name attribute'ını first_name olan elementi seçtik. 
+
+<!-- <input id="first_name" class="input--style-4" type="text" name="first_name"> -->
+özetle querySelector kullanacaksak CSS'te ne yazıyorsak o şekilde yazmalıyız.
+
