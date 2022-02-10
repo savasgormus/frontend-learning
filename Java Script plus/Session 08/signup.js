@@ -1,4 +1,15 @@
-let navbarPathItemText = document.getElementsByClassName("nav__item").innerText;
-console.log(navbarPathItemText);
-let navbarPathItemText2 = document.getElementsByClassName("nav__link");
-console.log(navbarPathItemText2);
+// dom accessing
+let firstNameById = document.getElementById("first_name");
+console.log(firstNameById);
+
+let firstNameByClassName = document.getElementsByClassName("input--style-4")[0];
+console.log(firstNameByClassName);
+
+let firstNameByName = document.getElementsByName("first_name")[0];
+console.log(firstNameByName);
+
+let firstNameBySelectorId = document.querySelector("#first_name");
+console.log(firstNameBySelectorId);
+
+let firstNameBySelectorClass = document.querySelector(".input--style-4");
+console.log(firstNameBySelectorClass);
