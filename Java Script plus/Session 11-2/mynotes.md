@@ -26,3 +26,23 @@ nesneye ait olmayan bişeye çağırmak istersek undefined döner.
 
 25. satırda ise birthYear Property'sini değiştirdik. (DOM'da yaptığımız gibi.)
 person.firstname = "barry" ile objeye 1 property daha ekledik. çünkü firstname ve firstName farklı. Case sentsitive.
+delete person.firstname; ile objenin firstname property'sini sildik.
+
+30. satırda nesne içerisine nesne ekledik. çünkü arrayler de birer nesnedir.
+
+35. satırda -for of- yöntemi ile person objesi içerisindeki key'leri çağırdık.
+key yerine values yazarak da değerleri çağırdık.
+
+43. satırda ise key : value olmak üzere ikisini bir arada çağırdık.
+
+--- Obje Metodları ---
+
+şimdi objemize yaşını hesaplayan bir metod ekleyeceğiz.
+
+calcAgeBad: function(bYear){
+        return 2022 - bYear;
+    }  bu yöntem kötü bir yöntem
+
+calcAge() {
+        return 2022 - this.birthYear;
+    } bu ise tercih edilen yöntem.
