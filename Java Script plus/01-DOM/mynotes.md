@@ -25,6 +25,6 @@ getElementById'den sonra en hızlı çalışan method querySelector'dur.
 
 document.querySelector("[name='first_name']") => yine cssvari bir şekilde name attribute'ını first_name olan elementi seçtik. 
 
-<!-- <input id="first_name" class="input--style-4" type="text" name="first_name"> -->
+<input id="first_name" class="input--style-4" type="text" name="first_name"> 
 özetle querySelector kullanacaksak CSS'te ne yazıyorsak o şekilde yazmalıyız.
 
