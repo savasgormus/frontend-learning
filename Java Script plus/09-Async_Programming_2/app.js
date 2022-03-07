@@ -53,7 +53,7 @@ function wait(ms) {
 //     });
 
 //-----------------------------------------------------
-//! Örnek
+//todo Örnek
 //-----------------------------------------------------
 
 const cayDemle = () => {
@@ -110,3 +110,55 @@ const afiyetOlsun =  () => {
 };
 
 // cayDemle();
+
+//-----------------------------------------------------
+//! Async Await
+//-----------------------------------------------------
+
+// const prom = new Promise((resolve, reject) => {
+//     wait(2000);
+//     resolve("Promise çalıştı");
+// });
+
+// const func1 = async () => {
+//     wait(2000);
+//     return "async function çalıştı";
+// };
+
+// async function func2() {
+//     wait(2000);
+//     return "blabla";
+// };
+
+// console.log("prom instanceof promise: >>", prom instanceof Promise);
+// console.log("func1 instanceof promise: >>", func1() instanceof Promise);
+// console.log("func2 instanceof promise: >>", func2() instanceof Promise);
+
+// async function func3() {
+//     wait(2000);
+//     // throw new Error("Hata oluştu");
+//     await Promise.reject(new Error("Hata oluştu"));
+// };
+
+// console.log("func3 instanceof promise: >>", func3() instanceof Promise);
+
+const cayDemle2 = async () => {
+    try {
+        const durum1 = await suyuKaynat();
+        console.log(durum1);
+        const durum2 = await cayEkle();
+        console.log(durum2);
+        await bekle(1500);
+        const durum3 = await afiyetOlsun();
+        console.log(durum3);
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+cayDemle2();
+
+
+//-----------------------------------------------------
+//! Fetch
+//-----------------------------------------------------
