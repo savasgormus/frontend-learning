@@ -40,3 +40,45 @@ clg(id) dediğimizde bize tanımlanan id'yi yazdıracak ve 4 saniye bekledikten 
 clearTimeout() ile bu işlemi durdururuz. setTimeout'un id vermesinin amacı da budur. 
 bu örnekte clearTimeout(id) diyerek 4 saniye sonra gelecek olan hello world çıktısının çalışmasını durdurduk.
 fakat id2 çalışmaya başladı ve 1 saniye sonra "hello world" çıktımızı aldık.
+
+
++++ örnek 2 +++
+
+5 tane işlemimiz var fakat aralarından biri çok uzun sürecek bir işlem. bu durumda setTimeout() ile işlemleri sırayla çalıştırır. ve uzun süren işlemi arka planda çalıştırmaya devam ederken kod akışını bozmaz.
+
+bir slowtask isimli fonksiyon tanımladık.
+burada istediğimiz şey 1,2,3,4'ü yazsın fakat slowtask'i ne zaman biterse o zaman yazsın. burada setTimeout() süresini 0 yazdık. böylece belirli bir sürede değil benim işim biter bitmez ilk fırsatta yazdır dedik.
+
+Javascript single-thread'dir. bu yüzden settimeout 0 ile bütün işlemler bittikten sonra ilk müsait zamanında çalıştır dedik. 
+
+yine aynı örnekte wait() fonksiyonu var. burada sıralı kodu bloke ettik. task1 yapıldıktan sonra 2 saniye bekliyor ve task2 yapılıyor. daha sonra slowtask'i arka plana atıp task3 ve task4'ü yapıyor.
+
+wait(ms) fonksiyonu:
+    başlangıç zamanı aldık: bugünün tarihi - şu anki zaman
+    bitiş tarihi : başlangıç tarihi olarak atadık:
+    WHILE (end < start + ms) {
+        bitiş tarihi : bugünün tarihi - şuanki zaman
+    }
+
+
++++ örnek 3 +++
+
+console.time ile zaman tutmaya başlıyoruz
+console.timeLog ile zamanı ölçmeye, geçen süreyi yazdırmayı sağlıyoruz.
+console.timeEnd ile zamanı ölçmeyi bitiriyoruz.
+
+yazdığımız kodun developement aşamasında ne kadar süre içerisinde çalıştığını test edebiliriz.
+
+
++++ örnek 4 +++
+
+zaman ölçümünü başlattık ve 2 saniye beklettik. daha sonra bir for döngüsü ile i'yi 1000'e kadar arttıran for döngüsü kurduk.
+bu işlem BİTTİKTEN 2 saniye sonra setTimeout() ile zaman tutma işlemini durdurduk.
+
+
++++ örnek 5 +++
+
+bu 3 kod settimeout sırasına göre çalışacak. yani hepsi bittikten sonra verdiğimiz süreye göre bize mesajlarını verecek. yani ilk önce 3. uyarıyı sonra 2.yi sonra 1.yi yazdıracak.
+
+şimdi bu örneği biraz değiştireceğiz. ilk iş bitsin ve 1 saniye sonra diğeri başlasın. diğeri de 2. işlem bittikten 1 saniye sonra başlasın:
+bu durumda aritmetik işlem yapamayız. o yüzden nested yapıda yapmalıyız.
