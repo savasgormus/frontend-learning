@@ -156,9 +156,91 @@ const cayDemle2 = async () => {
     }
 };
 
-cayDemle2();
+// cayDemle2();
 
 
 //-----------------------------------------------------
 //! Fetch
 //-----------------------------------------------------
+
+//* https://jsonplaceholder.typicode.com/users/8
+const url = "https://jsonplaceholder.typicode.com/users/8";
+
+// fetch(url)
+//     .then((response) => {
+//         // console.log(response);
+//         return response.json();
+//     })
+//     .then((data) => {
+//         console.log(data);
+//     });
+
+
+function usingFetch(url) {
+    fetch(url)
+        .then((res) => {
+            console.log(res);
+            if(!res.ok) {
+                throw new Error("Hata oluştu");
+            }
+            res.json()})
+        .then((data) => {
+            // console.log("user:", data);
+        })
+        .catch((error) => {
+            console.error("ERROR", error);
+        })
+}
+
+//usingFetch(url);
+
+async function usingAsyncFetch(url){
+    try {
+        const res = await fetch(url);
+        if(!res.ok) {
+            throw new Error("Hata oluştu");
+        }
+        const userData = await res.json();
+        // console.log("User Data :",userData);
+        for (const [key, value]  of Object.entries(userData)) {
+            console.log(key,"=>", value);
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+// usingAsyncFetch(url);
+
+
+
+async function usingAsyncFetch2(url){
+    try {
+        const res = await fetch(url);
+        if(!res.ok) {
+            throw new Error("Hata oluştu");
+        }
+        return await res.json();
+        
+    } catch (error) {
+        console.error(error);
+    }
+}
+// usingAsyncFetch2(url).then((data) => {
+//     console.log(data);
+// });
+
+const f1 = async () => {
+    const data = await usingAsyncFetch2(url);
+    console.log(data);
+};
+f1();
+
+(async () => {
+    const url2 = "https://jsonplaceholder.typicode.com/todos";
+    const todoList = await usingAsyncFetch2(url2);
+    // console.log(todoList);
+    todoList.forEach(todoItem => {
+        console.log(`${todoItem.id} \n ${todoItem.title} \n ${todoItem.completed}`);
+    })
+})();
