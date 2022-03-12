@@ -14,34 +14,45 @@
 // const response = await fetch('https://restcountries.com/v3.1/name/Turkey');
 
 const renderCountry = (data, type = 'country') => {
-    const flag = data.flags.svg;
-    const countryName = data.name.common;
-    const region = data.region;
-    const capital = data.capital;
-    const population = data.population;
-    const languages = data.languages;
-    const currencies = data.currencies;
+    // const flag = data.flags.svg;
+    // const countryName = data.name.common;
+    // const region = data.region;
+    // const capital = data.capital;
+    // const population = data.population;
+    // const languages = data.languages;
+    // const currencies = data.currencies;
+
+    //! destructing yöntemi ile değişkenleri alma
+    const {
+        region, 
+        population, 
+        capital, 
+        languages, 
+        currencies, 
+        name:{common:countryName},
+        flags:{svg:flag}
+    } = data;
+
+
 
     const countryHtmlCard = `
         <img src="${flag}" class="card-img-top border border-secondary" alt="Flag" />
         <div class="card-body">
-          <h5 class="card-title">${countryName}</h5>
-          <p class="card-text">${region}</p>
+            <h5 class="card-title">${countryName}</h5>
+            <p class="card-text">${region}</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><span><i class="fas fa-2x fa-landmark"></i>${capital}</span></li>
-          <li class="list-group-item"><span><i class="fas fa-lg fa-users"></i>${(
+            <li class="list-group-item"><span><i class="fas fa-2x fa-landmark"></i>${capital}</span></li>
+            <li class="list-group-item"><span><i class="fas fa-lg fa-users"></i>${(
             population / 1_000_000
         ).toFixed(2)} M</span></li>
-          <li class="list-group-item"><span><i class="fas fa-lg fa-comments"></i>${Object.values(
+            <li class="list-group-item"><span><i class="fas fa-lg fa-comments"></i>${Object.values(
             languages
         )}</span></li>
-          <li class="list-group-item">
-            <span
-              ><i class="fas fa-lg fa-money-bill-wave"></i>${Object.values(currencies)[0].name
+            <li class="list-group-item">
+            <span><i class="fas fa-lg fa-money-bill-wave"></i>${Object.values(currencies)[0].name
         } ${Object.values(currencies)[0].symbol}
-              </span
-            >
+            </span>
           </li>
         </ul>`;
     if (type === 'country') {
@@ -95,9 +106,9 @@ const renderError = (msg) => {
     errorHtml.classList.add('alert', 'alert-danger', 'alert-container');
     errorHtml.innerText = msg;
     inputContainer.insertAdjacentElement('beforeend', errorHtml);
-    setTimeout(()=>{
+    setTimeout(() => {
         errorHtml.remove();
-    },3000)
+    }, 3000)
 };
 
 const viewCountry = async (countryName) => {
@@ -129,5 +140,5 @@ const viewCountry = async (countryName) => {
     }
 };
 
-viewCountry('Australia');
+viewCountry('Turkey');
   // console.log(globalData);
