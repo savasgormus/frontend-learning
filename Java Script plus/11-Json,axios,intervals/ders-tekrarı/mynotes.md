@@ -76,3 +76,39 @@ sayfa yüklenirken apiden veri çekilecek. daha sonra 10 saniye bekleyecek ve ge
 - veri çekişini şimdi method belirterek yapacağız: await axios(url, { method: 'get' }) aslında ilk kullanımı ile arasında hiç bir fark yok fakat bize post methodunu kullanmamızı sağlar.
 
 - --- signup.js ---
+
+bir register işlemi yapacağız ve api'ye bir register işlemi gerçekleşecek.
+
+postman'e post ile register bilgisi göndereceğiz. linki verdik fakat api dökümanımız bizden kullanıcı bilgilerini de istiyor. body => row içerisine email ve passwordu yapıştırdık. fakat gönderme şeklini json olarak seçmeliyiz. bu işlem aslında json.stringify işlemi ile aynı işlevi görüyor. çünkü postman fetch/axios ayrımını yapamaz.
+
+yapacağımız işlemleri önce kafamızda tasarlayalım:
+- JS'de 2 tane inputumuz olmalı. biri e mail, diğeri password. bu bilgileri submit butonu ile almalı ancak json formatında bir string elde etmeliyiz.
+- yani bir customer objesi var ve bu objenin 2 property'si var. email ve password.
+- fetch ya da axios ile url'yi methodu(post) ve datayı vermeliyiz. fetch ile yapacaksak json.stringfy yapmalıyız fakat biz axios kullanacağımız için buna gerek yok çünkü axios bunu kendisi yapıyor.
+
+- dom ile 3 elementimizi de yakaladık.
+
+- addEventListener ile sayfa yüklendiğinde kullanıcı adı ve şifresini otomatik doldurması için mail ve password değişkenlerimizin value'larını belirttik.
+
+- yine addEventListener ile submit butonuna tıklandığında gerçekleştireceğimiz işlemleri yazıyoruz.
+
+- submit butonu için async fonksiyon yazarak bodyDatamızı oluşturduk. email değişkenini ve password değişkenine dom ile aldığımız elementlerin value'larını atadık ve console.log postman ve api sayfamızda gördüğümüz verinin aynısını elde ettik.
+
+- şimdi try/catch bloğumuzu oluşturuyoruz:
+try {                                      
+        const response = await axios({
+            url: "https://reqres.in/api/register",
+            method: "post",
+            data: bodyData,
+        })
+    } catch (error) {
+        alert(error)
+    }
+
+- TRY içerisine bize göre hata olan conditionları yazacağız. örneğin response url'mizi yanlış girdik ve bunun bize hata vermesini istiyoruz. bu durumda userData.token == undefined ise bize alert verecek.
+
+- ELSE kısmı için de apiKey'i ve baseURL'yi localStorage'a gönderiyoruz. buradaki amaç, çok fazla yerde kullanacağımız veriyi localsorage'a kaydetmek.
+
+- ek olarak apikey'i extentions.js dosyasından aldığımız EncryptStringAES() fonksiyonu ile şifreleyip localStorage'a kaydediyoruz.
+
+- daha sonra window.location.href ile userList.html sayfasına yönlendiriyoruz.
