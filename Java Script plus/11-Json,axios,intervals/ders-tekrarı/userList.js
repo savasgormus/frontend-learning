@@ -1,61 +1,29 @@
 const tbody = document.getElementById('tbodyUserList');
 
-
-window.onload = () =>{
-    getApiUserList();
-    // setInterval(getApiUserList, 5000);
+window.onload = () => {
+    getApiUserList();                        //! 19
 }
 
-const getApiUserList = async () => {
+const getApiUserList = async() =>{               //! 36 - 37
     showLoading();
-    // axios
-    try {
-        // const responseData = await axios("https://reqres.in/api/users?page=1");
-        const responseData = await axios({
-            url: "https://reqres.in/api/users?page=1",
-            method: "get",
-            // method: "post";
-            // data:bodyDate
-        });
-        // console.log(responseData);
-        const { data: userListArray } = responseData.data;  // destruction
+    //axios
+    try {                                      //! 41
+        const responseData = await axios("https://reqres.in/api/users?page=2")
+        console.log(responseData);
+        const { data: userListArray } = responseData.data;             //! 40
         console.log(userListArray);
-        if(userListArray.lenght === 0){
-            alert("userlist not found");
-            removeLoading()
-        } 
-        else {
-            tbody.innerHTML = "";
-            userListArray.forEach(customer => {
-                tbody.innerHTML += `
-                <tr>
-                <td>
-					${customer.id}
-                </td>
-                <td>
-					<img src= "${customer.avatar}">
-                </td>
-                <td>
-                ${customer.email}
-                </td>
-                <td>
-                ${customer.first_name}
-                </td>
-                <td>
-                ${customer.last_name}
-                </td>
-            </tr>
-                `
-            removeLoading();
-            })
-        }
-    } 
-    catch (error) {
+        removeLoading();
+    } catch (error) {                         //!41
         alert(error);
-        // send errors to api and database
-        // postErrorLog("userlist","getApiUserList",error);
+        //send error to api and database (errorLogs table)
+        // postErrorLog("userList", "getApiUserlist", error);
         removeLoading();
     }
+
+
+
+
+
+
+
 }
-
-
