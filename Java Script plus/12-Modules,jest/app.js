@@ -5,7 +5,7 @@ import square, { WHW, WORKING_HOURS_WEEK as hrs, dec, inc, sum} from "./mymodule
 
 console.log("WHW: >>", WHW);
 console.log("hrs: >>", hrs);
-console.log("square(4): >>", square(4));
+console.log("square(10): >>", square(10));
 
 inc(4);
 inc(6);
