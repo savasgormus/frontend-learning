@@ -1,0 +1,11 @@
+.msg-img {
+    width: 250px;
+    height: 100px;
+    display: block;
+    margin: 1rem auto;
+
+}
+
+.msg-h1{
+    color: red;
+}

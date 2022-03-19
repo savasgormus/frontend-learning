@@ -1,7 +1,15 @@
+import Footer from "./Footer.jsx";
+import Header from "./Header.js";
+import Msg from "./Msg.jsx";
+
+
+
 function App() {
   return (
     <div>
-      <h1>Hello React</h1>
+      <Header />
+      <Msg />
+      <Footer />
     </div>
   );
 }
