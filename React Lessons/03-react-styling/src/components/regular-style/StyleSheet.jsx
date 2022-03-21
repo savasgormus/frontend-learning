@@ -1,20 +1,18 @@
+import "./styleSheet.css";
+const StyleSheet = (props) => {
+  const isSecenek = props.secenek ? "once" : "sonra";
 
-const StyleSheet = () => {
-
-  
   return (
     <div>
       <img
-     src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"
+        className="logo"
+        src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"
         alt="clarusway-logo"
       />
-      <h1 >Regular-style --- STYLESHEET </h1>
-      <h1   >Regular-style --- STYLESHEET</h1>
- <p>
-        Welcome to Clarusway
-      </p>
-  <p >Welcome to Clarusway</p>
-      </div>
+      <h1 className="header">Regular-style --- STYLESHEET</h1>
+      {/* <p className={props.secenek ? "once" : "sonra"}>Welcome to Clarusway</p> */}
+      <p className={isSecenek}>Welcome to Clarusway</p>
+    </div>
   );
 };
 
