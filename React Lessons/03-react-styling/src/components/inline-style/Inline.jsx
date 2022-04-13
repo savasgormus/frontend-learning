@@ -1,28 +1,31 @@
-import React from "react";
+import React from 'react'
 
 const myStyle = {
     parag: {
-        color: "blue",
+        color: "green",
         fontSize: "2rem",
-        fontWeight: "bolder",
+        fontWeight: "bolder"
     },
     div: {
-        backgroundColor: "green",
-        fontSize: "3.2rem",
-    },
-};
+        backgroundColor: "gray",
+        fontSize: "3.2rem"
+    }
+}
 
 const Inline = () => {
     return (
         <>
-            <div style={{ backgroundColor: "red", color: "#fff" }}>
-                <h1>Hello inline css</h1>
+            <div style={{
+                backgroundColor: "red",
+                color: "#fff"
+            }}>
+                <h1>Hello World!</h1>
                 <div style={myStyle.div}>
                     <p style={myStyle.parag}>Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
         </>
-    );
-};
+    )
+}
 
-export default Inline;
+export default Inline
