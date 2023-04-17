@@ -64,16 +64,18 @@ const friend = me;
 friend.age = 27;
 console.log('Friend: ', friend); // 27
 console.log('Me: ', me); //27
-//? me olarak tanımladığımız adres değişmiyor. fakat me içerisine tanımlı adreste içerisinde bulunan verileri değiştirebiliyoruz.
-//? friend ve me aynı adrese baktığı için friend.age ile me içerisindeki age:30 verisini değiştirebildik.
+//* me olarak tanımladığımız adres değişmiyor. fakat me içerisine tanımlı adreste içerisinde bulunan verileri değiştirebiliyoruz.
+//* friend ve me aynı adrese baktığı için friend.age ile me içerisindeki age:30 verisini değiştirebildik.
 
 {
     let localvar1= "local variable";
     console.log(localvar1);
     var myName= "savaş";
 }
-// console.log(localvar1); //?scope içerisinde tanımladığımız için hata alacağız. çünkü scope dışına çıktığı anda bellekte yer tutmaz.
-console.log(myName); //? var ile scope içerisinde tanımlamamız bişey değiştirmez. bellekte her türlü yer tutacak.
+// console.log(localvar1); 
+//* scope içerisinde tanımladığımız için hata alacağız. çünkü scope dışına çıktığı anda bellekte yer tutmaz.
+console.log(myName);
+//* var ile scope içerisinde tanımlamamız bişey değiştirmez. bellekte her türlü yer tutacak.
 
 //! const Konusu
 
@@ -86,7 +88,7 @@ const otherStudent = student;
 console.log(otherStudent);
 
 otherStudent.number = "F999";
-//? ikisi de aynı adrese baktığı için number datası ikisinde de değişecek.
+//* ikisi de aynı adrese baktığı için number datası ikisinde de değişecek.
 console.log(student);
 
 // otherStudent = {
@@ -94,10 +96,10 @@ console.log(student);
 //     number: 'F3333'
 // }
 // console.log(otherStudent); // hata verir
-//? burada adresi değiştirmeye çalışıyoruz. JS buna izin vermez, hata alırız.
-//? yukarıda adresin içerisinde değişiklik yaptık. bu yüzden bir hata almamıştık.
-//? özetle variables dediğimiz kutunun yerini değiştiremeyiz fakat içerisindeki herşeyi değiştirebiliriz.
+//* burada adresi değiştirmeye çalışıyoruz. JS buna izin vermez, hata alırız.
+//* yukarıda adresin içerisinde değişiklik yaptık. bu yüzden bir hata almamıştık.
+//* özetle variables dediğimiz kutunun yerini değiştiremeyiz fakat içerisindeki herşeyi değiştirebiliriz.
 
 otherStudent.number1 = 'f3333';
 console.log(otherStudent);
-//? ikinci bir number eklemiş olduk. yine const ile atadığımız değiştirilemez bir sabite ekleme yaptık.
+//* ikinci bir number eklemiş olduk. yine const ile atadığımız değiştirilemez bir sabite ekleme yaptık.
