@@ -9,7 +9,7 @@ console.log('js is running');
 // let mynumber; => define 
 // let myNumber = 10; => assign
 
-//! Operators
+//! OPERATORS
 //*typeof operatörü ile datanın tipini görebiliriz.
 
 // console.log(`1: ${typeof 0}`);
@@ -36,7 +36,31 @@ console.log('js is running');
 
 //* var ile tanımladığımız değişkenler hoist olur ve en başta yüklenir, hazırda bekler. let ve const'da bu yoktur.
 
+
+
 //? NULL
+//* boş değer. primitive bir data tipidir ama typeof operatörü ile baktığımızda object verir.
+//* garbage collector mekanizması kullanılmayan memory'i kullanmak için null'ı kullanır.
+
+// let f = null;
+// console.log(typeof f);
+
+
+
+//? NUMBER
+
+// let g = 3.14;
+// let h = 1_000_000; //*underscorelar okunabilirliği artsın diye koyduk. sayıda bir değişiklik yaratmaz.
+// console.log(typeof g, g);
+// console.log(typeof h, h);
+
+//* maksimum 15 basamağa kadar JS destekler. daha sonrası için garanti vermez yuvarlayabilir.
+// let i = 999_999_999_999_999;
+// let j = 999_999_999_999_999_333;
+// console.log(i, j);
+
+// 01.07
+
 
 
 
