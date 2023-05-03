@@ -83,3 +83,24 @@
 //* And &&, verilen tüm değerler 1 ise true döndürür. aksi halde false döndürür. ilk değer 0 ise false döndürür.
 //* Or ||, verilen değerlerden sadece birisi 1 ise true döndürür.
 //* Not !, verilen değerin tam tersine göre true ya da false döndürür.
+
+console.log(Boolean(null)); //* false
+console.log(null == false); //* false
+console.log(null == true); //* false
+console.log(null == null); //* true
+console.log(NaN == NaN); //* false 
+let a,b;
+console.log(a == b); //* true - ikisi de undefined
+
+//* Nullish Coalescing Operator ?? ile yapılır.
+//* ilk değer null ya da undefined ise diğer değeri çıkartır.
+//* diğer bütün işlemlerde ilk değer çıkar.
+
+let d; //* undefined
+let e = 'Hello World';
+console.log(d ?? e);
+console.log(e ?? d);
+
+let f = null;
+console.log(f ?? d);
+console.log(d ?? 0);
