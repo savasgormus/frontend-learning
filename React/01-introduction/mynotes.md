@@ -13,5 +13,3 @@
 -- React Dom'un bir kopyasını alır ve daha hızlı çalışması için RAM bellekte çalıştırır. buna Virtual dom denir. Virtual Dom'un bir snapshot'ı(kopyası) daha oluşturulur. Değişiklik bu snapshot üzerinde yapılır ve önceki Virtual Dom ile diff() algoritmasıyla farkları bulur ve değişmesi gereken componentleri bulup toplu bir şekilde bunları DOM'da günceller.
 
 -- React bütün elementleri statik olarak görür. Bunun sebebi render işlemini minimuma indirmektir. Developer hangi componentlerin statik ya da değişken element olduğuna karar verir. Değişken elementlerin state'lerini belirttiğimizde diff ile güncelleme sağlanır.
-
-2.05
